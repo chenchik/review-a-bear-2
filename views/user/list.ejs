@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github Users</title>
+		<link rel="stylesheet" text="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <h3>Spring 2016 Students</h3>
+        <% if (users.length) { %>
+        <ul>
+            <% for (var i in users) { %>
+            <li><a href="/users/<%= users[i].username %>"><%= users[i].name %></a></li>
+            <% } %>
+        </ul>
+        <% } else { %>
+        <p>Sorry, there is no content yet.</p>
+        <% } %>
+
+        <p><a href="/user/new">New Post</a></p>
+    </body>
+</html>

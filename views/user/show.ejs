@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github Users</title>
+    </head>
+    <body>
+        <h3><%= user.name %></h3>
+        <p><a href="/users/delete/<%= user.username %>">Delete</a></p>
+        <form action="/users/<%= user.username %>" method="POST">
+
+            <p>
+            <label>Full Name</label>
+            <input type="text" id="name" name="name" value="<%= user.name %>" />
+            </p>
+
+            <p>
+            <label>Username</label>
+            <input type="text" id="username" name="username" value="<%= user.username %>" />
+            </p>
+
+            <p>
+            <label>Github Link</label>
+            <input type="text" id="link" name="link" value="<%= user.link %>" />
+            </p>
+
+            <button>Update</button>
+i
+        </form>
+    </body>
+</html>

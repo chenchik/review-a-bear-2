@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Post</title>
+		<link rel="stylesheet" text="text/css" href="../uploads/css/styleAlt.css"/>
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Arvo:400,400italic,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Droid+Sans|Noto+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      
+		
+		<div class="headerContainer">
+				<!-- Single button -->
+			<div class="innerHeaderContainer">
+				
+		  
+					
+				<div class="headerImgContainer">
+					
+					<a href="/posts"><img class="headerImage " src="../../uploads/bear_icon.jpg"/></a>
+					<div class="titleDiv">
+						<p class="title ">Review a Bear WorkShop</p>
+					</div>
+				</div>
+				<div class="otherheaderContainer">
+				
+					<div class="innerTopButtonContainer">
+						<div class="searchContainer">
+							<form action="/search" method="POST">
+							
+								<input placeholder="&#128269;" type="text" id="search" name="search" value="" />
+								<a><button id="searchSubmit" type="submit">Submit</button></a>
+						
+							</form>
+						</div>
+						<div class="btn-group">
+							<a href="/post/new"><button class="postButton">New Post</button></a>
+						</div>
+						<div class="btn-group">
+						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Authors <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+							<% var authArr = []; authCount = 0; %>
+							<% for(var i in posts){ %>
+								<% if(authArr.indexOf(posts[i].author) == -1){  %>
+									<li><a href="/author/<%= posts[i].author %>"><%= posts[i].author %></a></li>
+									<% authArr[authCount++] = posts[i].author %>
+								<% } %>
+							<% } %>
+						  </ul>
+						</div>
+						
+						<div class="btn-group">
+						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Categories <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+							<% var catArr = []; catCount = 0; %>
+							<% for(var i in posts){ %>
+								<% if(catArr.indexOf(posts[i].category) == -1){  %>
+									<li><a href="/category/<%= posts[i].category %>"><%= posts[i].category %></a></li>
+									<% catArr[catCount++] = posts[i].category %>
+								<% } %>
+							<% } %>
+							
+						  </ul>
+						</div>
+											
+					</div>
+				</div>
+			</div>
+			
+			
+        </div>
+		
+		<div class="inbetweener inbetweenForm">
+			<div class="interweenTextContainer interweenTextContainerForm">
+				<p class="inbetweenText">Here, you can let people know what you think of your bear.</p>
+				<br>
+				<p class="inbetweenText">Just add a title, review body, category, amount of stars, your best photo, and today's date.</p>
+				<br>
+				
+			</div>
+		</div>
+		
+		<div class="container">
+			<form action="/posts" method="POST" enctype="multipart/form-data">
+
+				<div class="inputContainer">
+					<div class="titleAndContentContainer">
+					
+						
+							<p class="inputField">Title</p>
+							<input type="text" id="title" class="someInput" name="title" value="" />
+						
+						
+						
+						<p class="inputField">Review</p>
+						<textarea type="text" id="content" class="someInput" name="content" value="" rows=12 cols=20 ></textarea>
+						
+					</div>
+					<div class="otherInputsContainer">
+						
+						<p class="inputField">Author</p>
+						<input type="text" id="author" name="author" class="someInput" value="" />
+						
+
+						
+						<p class="inputField">Category</p>
+						<input type="text" id="category" name="category" class="someInput" value="" />
+						
+						
+						
+						
+						
+						<p class="inputField">Stars</p>
+						<select id="stars" name="stars" class="someInput">
+							<option value="" disabled selected hidden># of Stars</option>
+							<option value="1">&#9733;</option>
+							<option value="2">&#9733; &#9733;</option>
+							<option value="3">&#9733; &#9733; &#9733;</option>
+							<option value="4">&#9733; &#9733; &#9733; &#9733;</option>
+							<option value="5">&#9733; &#9733; &#9733; &#9733; &#9733;</option>
+					  </select>
+						
+						
+						<p class="inputField">Thumbnail</p>
+						<input type="file" class="someInput" id="thumbnail" name="thumbnail" value="" accept="image/*" />
+						
+						<p class="inputField">Date Created</p>
+						<input type="date" id="date" class="someInput" name="date" value="" />
+						
+						<a href="/post/new"><button type="submit" class="postButton formCreateButton">Create Review</button></a>
+						
+					
+					</div>
+				</div>
+			</div>
+		
+		
+		
+        </form>
+		<footer id="footer">
+			
+				
+				<div class="col-lg-5 col-sm-8 col-xs-6">
+					<p><a class="footerElem" href="http://hithub.com/chenchik/Review-a-Bear-Workshop">Project Information</a></p>
+					
+				</div>
+				<div class="col-lg-4 col-sm-0 col-xs-0">
+					
+   			    </div>
+				<div class="col-lg-3 col-sm-4 col-xs-6 lastFooterItem">
+					<p class="footerElem" >&#169; Danila Chenchik Industries</p>		  
+				</div>
+      
+			
+		</footer>
+
+    </body>
+</html>
+

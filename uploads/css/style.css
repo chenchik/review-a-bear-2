@@ -1,0 +1,382 @@
+h3{
+	font-size: 100px;
+}
+input[type=file] {
+	background-color: white;
+}
+.postContainer {
+    display: inline-flex;
+	    width: 100%;
+    
+    
+	    border-top: 5px solid rgba(49,55,71, 0.8);
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.contentContainer {
+    padding-left: 40px;
+	    height: 104px;
+    margin-top: 16px;
+    overflow: auto;
+
+}
+.titleContainer {
+    margin-left: 40px;
+	height: 60px;
+}
+p.postTitle {
+    height: 40px;
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bolder;
+	color: #313747;
+}
+img.postImage {
+    width: 200px;
+	height: 200px; 
+	object-fit: cover;
+}
+body{
+	
+}
+.headerContainer {
+    display: flex;
+	margin-top: 40px;
+	margin-bottom: 40px;
+    height: 240px;
+	    margin-left: auto;
+    margin-right: auto;
+	    width: 70%;
+}
+.headerImgContainer {
+    width: 33%;
+	height: 100%;
+}
+img.headerImage {
+    /* float: right; */
+    display: block;
+    /*width: 80%;*/
+	height: 100%;
+    margin-left: auto;
+}
+.otherheaderContainer {
+    width: 67%;
+}
+p.title {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 900;
+    color: #313747;
+    height: 120px;
+    margin-left: 40px;
+    /* margin: auto; */
+    padding-top: 40px;
+    /* border: 2px solid; */
+    font-size: 40px;
+}
+.titleDiv {
+    height: 120px;
+}
+.postButton {
+    margin-left: 40px;
+    
+}
+button.postButton {
+    padding: 25px;
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    border: 5px solid #313747;
+    border-radius: 10px;
+    background: #896952;
+    font-weight: 900;
+	    width: 91%;
+}
+
+
+/**************TOP BUTTONS*******/
+
+.topButtonContainer {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 40px;
+}
+
+.btn-group, .btn-group-vertical {
+    
+    width: 33%;
+}
+button.btn.btn-default.dropdown-toggle {
+    width: 100%;
+	 background-image: none;
+    background: #626c82;
+    color: white;
+    border: 5px solid #313747;
+    border-radius: 5px;
+    height: 40px;
+	    font-family: 'Varela Round', sans-serif !important;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: white !important;
+    background-color: #626c82 !important;
+    border-color: #313747 !important;
+}
+ul.dropdown-menu {
+    background: #EF8A45;
+    /* color: white; */
+    border: 5px solid #313747;
+    margin-top: 5px;
+	border-radius: 5px;
+}
+
+.dropdown-menu {
+	width: 100%;
+}
+.dropdown-menu>li>a{
+	    color: white !important;
+    font-family: 'Varela Round', sans-serif !important;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: #d67e44 !important;
+    background-image: none !important;
+}
+.dropdown-menu>li {
+    height: 40px;
+}
+
+
+/*********END TOP BUTTONS**************/
+/*****START SEARCHBAR ****/
+.searchContainer {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+	    margin-bottom: 40px;
+}
+input#search {
+    width: 100%;
+    border: 5px solid #313747;
+    height: 40px;
+    border-radius: 5px;
+    background: #EF8A45;
+    color: white;
+    font-family: 'Varela Round', sans-serif !important;
+    text-align: center;
+	font-size: 20px;
+}
+input#search::-webkit-input-placeholder,
+input#search::-webkit-input-placeholder
+{
+  color:    white;
+}
+
+input#search:-moz-placeholder,
+input#search:-moz-placeholder 
+{
+  color:    white;
+}
+
+input#search::-moz-placeholder,
+input#search::-moz-placeholder 
+{
+  color:    white;
+}
+
+input#search:-ms-input-placeholder,
+input#search:-ms-input-placeholder 
+{
+  color:    white;
+}
+
+
+/***END SEARCHBAR ***********/
+.alterButton {
+    height: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    width: 20px;
+    /*border-radius: 50px;
+    border: 5px solid #313747;
+    background: #626c82;*/
+    color: #eee;
+    margin-left: 40px;
+}
+.buttonsContainer {
+    display: -webkit-box;
+	    height: 20px;
+    /* margin-top: 60px; */
+    bottom: 0px;
+	margin-left: 40px;
+}
+span.glyphicon {
+    margin-left: 40px;
+    font-size: 20px;
+    color: #626c82;
+}
+span.glyphicon:hover {
+    margin-left: 40px;
+    font-size: 20px;
+    color: #313747;
+}
+a.metaA {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    color: #F08B45;
+
+}
+a.metaA:hover {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    color: #896952;
+	/*    font-family: 'Arvo', serif;*/
+
+}
+p.postContent {
+    font-family: 'Arvo', serif;
+    /* font-family: 'Droid Sans', sans-serif; */
+    /* font-family: 'Noto Sans', sans-serif; */
+    line-height: 20px;
+}
+
+/**********user input for creation *****/
+.inputField {
+    font-family: 'Varela Round', sans-serif;
+	font-size: 28px;
+	    margin-bottom: 0px;
+		color: white;
+	    
+}
+.inputContainer{
+	    border: 5px solid rgba(49,55,71, 0.8);
+    
+	display: -webkit-box;
+	border-radius: 5px;
+    
+	    background: #626c82;
+		padding: 0px 35px 35px 35px;
+		margin-bottom: 40px;
+
+}
+	.titleAndContentContainer {
+    width: 70%;
+	padding-right: 40px;
+}
+.otherInputsContainer{
+	width: 30%;
+}
+.someInput {
+    width: 100%;
+	font-family: 'Arvo', serif;
+    /* font-family: 'Droid Sans', sans-serif; */
+    /* font-family: 'Noto Sans', sans-serif; */
+    line-height: 20px;
+	border-radius: 5px;
+    border: 1px solid #ccc;
+	    padding: 5px;
+		border: 5px solid rgba(49,55,71, 1.0);
+}
+input#content {
+   
+}
+textarea#content {
+    height: 200px;
+}
+
+
+#footer {
+    border: 5px solid #313747;
+    border-radius: 5px;
+    background: #896952;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    padding: 10px;
+	    height: 40px;
+}
+img.footerElem {
+    width: 87px;
+}
+.footerElem {
+    color:white;
+}
+a.footerElem:hover {
+    color:#f08a46;
+}
+
+
+/**** MEDIA QUERIES*****/
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+   .headerContainer {
+	   width: 80%;
+   }
+}
+@media only screen and (max-width: 991px) and (min-width: 744px) {
+	.headerContainer {
+	   width: 100%;
+   }
+   .otherInputsContainer {
+		width: 40%;
+	}
+	.titleAndContentContainer {
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 743px) and (min-width: 0px) {
+	.headerContainer {
+	   width: 100%;
+	   display: block;
+	       height: initial;
+		       margin-top: 20px;
+    margin-bottom: 20px;
+   }
+    .headerImgContainer {
+		width: 100%;
+		height: 80px;
+	}
+	img.headerImage {
+		margin-right: auto;
+		width: 80px;
+		height: 80px;
+	}
+   .otherInputsContainer {
+		width: 100%;
+	}
+	.otherheaderContainer {
+		width: 100%;
+	}
+	.titleAndContentContainer {
+		width: 100%;
+	}
+	.inputContainer {
+		display: block;
+		padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+	}
+	.titleAndContentContainer {
+		padding-right: 0px;
+	}
+	p.title {
+		padding-top: 0px;
+		margin-left: 0px; 
+		height: 40px;
+		font-size: 30px;
+	}
+	.titleDiv {
+		height: 40px;
+		text-align: center;
+		    margin-bottom: 10px;
+	}
+	button.postButton {
+		width: 50%;
+		height: 40px;
+    padding: 0px;
+    margin-left: 0px;
+    font-size: 20px;
+	}
+	.newPostDiv{
+		text-align: center;
+	}
+	.inputField{
+		font-size: 14px;
+	}
+}
